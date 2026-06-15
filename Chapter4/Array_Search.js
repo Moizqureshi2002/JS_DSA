@@ -16,14 +16,13 @@
 //     </div>
 // `)
 
-let Arr1 = [12, 53, 22, 98, 73];
 let Arr2 = [12, 53, 22, 98, 73];
+let Arr1 = [12, 53, 22, 98, 73];
 let item = 98;
 
 
 for (i = 0; i < Arr1.length; i++){
     if(Arr1[i] === item){
-        // console.log(i)
         break
     }
 }
@@ -49,18 +48,13 @@ Arr2.splice(2,1)
 
 
 let data = [1,8,3,4,6,10,7,9,5,2]
-
-let sortedData = []
-
 for (let i = 0; i < data.length; i++){
-    // if(data[i] === data[i + 0]){
-    //     sortedData[sortedData.length] = data[i] 
-        
-    // }else
-     if(data[i] > data[i+1]){
-        sortedData[i] = data[i]
-    } else{
-        sortedData[sortedData.length+1] = data[i]
+    for(let j = 0; j < data.length; j++){
+        if(data[j] > data[j+1]){
+            let temp = data[j];
+            data[j] = data[j+1]
+            data[j+1] = temp
+        }
     }
 }
-console.log(sortedData)
+console.log(data)
